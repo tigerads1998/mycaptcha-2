@@ -1,0 +1,17 @@
+name = "cloudflare-project"
+type = "webpack"
+account_id = ""  # Thêm account ID của bạn vào đây
+workers_dev = true
+compatibility_date = "2024-04-04"
+
+[site]
+bucket = "./src"  # Thư mục chứa các file static
+entry-point = "src"
+
+[build]
+command = ""
+upload.format = "service-worker"
+
+[env.production]
+workers_dev = false
+name = "cloudflare-project-prod" 
